@@ -215,7 +215,7 @@ color:#eb8116;
   .orange-more:hover {
     transform: scale(1.05);
     /*ボックスの影*/  
-    box-shadow: 0 15px 15px rgb(109, 255, 80, 0.4);
+    box-shadow: 0 15px 15px rgba(109, 255, 80, 0.4);
   }
   .company {
     font-size: 25px;
