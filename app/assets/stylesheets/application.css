@@ -1,0 +1,332 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+
+ * {
+    padding: 0;
+    margin: 0;
+  }
+  /* body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  }
+  header {
+    background-color: #00acee;
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a {
+    color: white; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  } */
+
+  
+
+
+/*========= スクロール途中でヘッダーが表示＆非表示するためのCSS ===============*/
+
+#header{
+    /*fixedで上部固定*/
+  position: fixed;
+  height: 70px;
+  width:100%;
+    z-index: 999;/*最前面へ*/
+  /*以下はレイアウトのためのCSS*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#ffffff;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/*　上に上がる動き　*/
+
+#header.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#header.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+/* h1{
+  font-size:1.2rem;
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+} */
+.menu-tag{
+  height: auto;
+}
+
+p{
+  margin-top:20px;  
+}
+
+small{
+  background:#333;
+  color:#fff;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #666;
+  padding:10px;
+  transition:all 0.3s;
+  margin-right: 100px;
+}
+
+nav ul li.current a,
+nav ul li a:hover,
+nav ul li a:active{
+  color:#fff; 
+}
+
+main {
+      padding-top: 70px;
+}
+section{
+  padding:30px;
+}
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+
+
+.menu-red{
+  border-left: 10px solid #e40b0b;
+}
+.menu-red:hover,
+.menu-red:active{
+  color:#e40b0b; 
+}
+.menu-orange{
+  border-left: 10px solid #eb8116;
+}
+.menu-orange:hover,
+.menu-orange:active{
+  color:#eb8116; 
+}
+.menu-yellow{
+  border-left: 10px solid #e0eb16;
+}
+.menu-yellow:hover,
+.menu-yellow:active{
+  color:#e0eb16; 
+}
+.menu-green{
+  border-left: 10px solid #61eb16;
+}
+.menu-green:hover,
+.menu-green:active{
+  color:#61eb16; 
+}
+.menu-blue{
+  border-left: 10px solid #16bdeb;
+}
+.menu-blue:hover,
+.menu-blue:active{
+  color:#16bdeb; 
+}
+.menu-purple{
+  border-left: 10px solid #a816eb;
+}
+.menu-purple:hover,
+.menu-purple:active{
+  color:#a816eb; 
+}
+
+
+.snsbtniti-box{
+  display: flex;  
+  justify-content: center;
+  margin-top: 50px;  
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  }
+
+
+/* ボタン全体 */
+.flowbtn17{
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:30px;
+  text-decoration:none;
+  transition:.5s;
+  background-color:#444;
+  color:#fff;
+  margin-left: 25px;
+  margin-right: 25px;
+  }
+  /* ボタンマウスホバー時のテキスト指定 */
+  .flowbtn17:hover{
+  text-decoration:none;
+  }
+  /* アイコンをど真ん中に */
+  .flowbtn17 i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  }
+  /* Twitterマウスホバー時 */
+  .flowbtn17.fl_tw2:hover{
+  background:linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+  color:#fff;
+  }
+  /* Instagramマウスホバー時 */
+  .flowbtn17.insta_btn2:hover{
+  background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;	
+  color:#fff;	
+  }
+  /* Facebookマウスホバー時 */
+  .flowbtn17.fl_fb2:hover{
+  background:-webkit-linear-gradient(top, #5c80c6 0%, #34528c 74%);	
+  background:linear-gradient(to bottom, #5c80c6 0%, #34528c 74%);
+  color:#fff;
+  }
+  /* Feedlyマウスホバー時 */
+  .flowbtn17.fl_fd2:hover{
+  background:linear-gradient(135deg, #b1ea4d 0%,#459522 100%);
+  font-size:28px;
+  }
+  /* Pocketマウスホバー時 */
+  .flowbtn17.fl_pk2:hover{
+  background:linear-gradient(135deg, #f36265 0%,#dd4f68 100%);
+  }
+  /* はてブアイコンのサイズ */
+  .flowbtn17.fl_hb2{
+  font-size:25px;
+  }
+  /* はてブマウスホバー時 */
+  .flowbtn17.fl_hb2:hover{
+  background:-webkit-linear-gradient(top, #1fbccd 0%, #1c91d4 84%);	
+  background:linear-gradient(to bottom, #1fbccd 0%, #1c91d4 84%);
+  }
+  /* YouTubeマウスホバー時 */
+  .flowbtn17.fl_yu2:hover{
+  background:linear-gradient(135deg, #f5515f 0%,#c9293c 100%);
+  color:#fff;
+  }
+  /* LINEマウスホバー時 */
+  .flowbtn17.fl_li2:hover{
+  background: linear-gradient(135deg, #3a9278 0%,#00c300 100%);
+  }
+  /* お問い合わせマウスホバー時 */
+  .flowbtn17.fl_ma2:hover{
+  background:linear-gradient(135deg, #fad961 0%,#f76b1c 100%);
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti2{
+  padding:0!important;
+  }
+  /* ボタン全体の位置 */
+  .snsbtniti2{
+  display:flex;
+  flex-flow:row wrap;
+  }
+  /* ボタン同士の余白 */
+  .snsbtniti2 li{
+  flex:0 0 48%;
+  text-align:center !important;
+  }
+  
+
+
+
+  .footer-logo-box{
+    display: flex;  
+    justify-content: center; 
+    }
+    .footer-logo{
+      width: 100%;
+  height: auto;
+      }
+
+
+    .footer-bottom{
+      height: 150px;
+    }
+    

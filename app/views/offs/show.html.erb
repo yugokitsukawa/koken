@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%= stylesheet_link_tag "offs", :media => "all" %>
+  </head>
+
+
+  <body><!--ページの見た目を作る部分-->
+<section id="area-2">
+  </section>
+<div class="">
+</div>
+
+
+<div class="orange">
+    <div class="all-white">
+
+<div class="name-collab-box">
+    <div class="name-collab">
+            <h1>
+              コラボ
+            </h1>
+    </div>
+</div>
+
+    <div class="first-block-collab">
+      
+        <div class="vision-block-collab">
+          <div class="vision-collab">
+            <h1>
+              広研×あなた
+              <br>
+              化学反応を起こす。
+            </h1>
+          </div>
+          <div class="sub-collab">
+            <h4>
+              商品開発、コンペ開発、企画参加等を行っています。
+              <br>
+              わたしたちとおもしろいきょうを生み出しませんか？
+            </h4>
+          </div>
+      </div>
+    </div>
+
+    </div>
+
+        <div class="all-orange">
+
+
+      <div class="show-collab-box-box">
+        <div class="show-collab-box">
+          <div class="show-collab-image-box">
+            <div class="show-collab-image">
+              <%= cl_image_tag(@off.image.filename, width: 800, height: 600, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %>
+            </div>
+          </div>
+          <div class="show-collab-company-box">
+            <div class="show-collab-company">
+              <%= @off.catch %>
+            </div>
+          </div>
+          <div class="show-collab-event-box">
+            <div class="show-collab-event">
+              <%= @off.event %>
+            </div>
+          </div>
+          <div class="show-collab-overview-box">
+            <div class="show-collab-overview">
+              <%= @off.overview %>
+            </div>
+          </div>
+          <div class="company-word-box">
+            <div class="company-word">
+            </div>
+          </div>
+          
+          <div class="show-collab-time-box">
+            <div class="show-collab-time">
+              <%= @off.created_at %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collabs-container">
+      <%# <div class="show-collab-image-box"> %>
+        <div class="collab">
+          <div class="collab-show-image">
+          <div class="show-image-add">
+      <%= cl_image_tag(@off.image2.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image")  %></div>
+      <div class="show-image-add"><%= cl_image_tag(@off.image3.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <div class="show-image-add"><%= cl_image_tag(@off.image4.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <div class="show-image-add"><%= cl_image_tag(@off.image5.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <%# </div> %>
+      </div>
+      </div>
+</div>
+
+
+<div class="">
+
+</div>
+      <%# <div class="post-box">
+        <div class="post">
+          <a class="post-word"<%= link_to "編集する", edit_collab_path(@collab.id) %></a>
+        <%# </div>
+      </div>  %>
+      <div class="post-box">
+        <a class="orange-more"<%= link_to 'トップ', :controller => "offs", :action => "index" %></a>
+        <%# <div class="post"> %>
+          <a class="orange-more"<%= link_to "編集", edit_off_path(@off.id) %></a>
+        <%# </div> %>
+      </div>
+    
+</div>
+
+
+</div>
+</div>
+
+
+
+
+<%= link_to 'コラボトップページ', :controller => "collabs", :action => "index" %>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </body>
+</html>

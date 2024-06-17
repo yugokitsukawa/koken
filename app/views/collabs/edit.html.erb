@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%= stylesheet_link_tag "collabs", :media => "all" %>
+  </head>
+
+
+  <body><!--ページの見た目を作る部分-->
+  <script type="text/javascript">
+      function first(){
+        var pass = prompt("Please enter your password");
+        var passWord = "potato";
+        if(pass == passWord){
+          alert("You have passed");
+        } else if(pass === null) {
+          window.location.href = "http://localhost:3000/frees";
+        } else {
+          alert("Your password is incorrect");
+          first();
+        }
+      }
+      window.onload = first()
+    </script>
+  <section id="area-2">
+  </section>
+<div class="">
+
+</div>
+
+<div class="orange">
+  <div class="all-orange">
+      <div class="orange-edit">
+      </div>
+      
+      <div class="show-collab-box-box">
+        <div class="show-collab-box">
+          <div class="show-collab-image-box">
+            <div class="show-collab-image">
+              <%= cl_image_tag(@collab.image.filename, width: 800, height: 600, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %>
+            </div>
+          </div>
+          <div class="show-collab-company-box">
+            <div class="show-collab-company">
+              <%= @collab.company %>
+            </div>
+          </div>
+          <div class="show-collab-event-box">
+            <div class="show-collab-event">
+              <%= @collab.event %>
+            </div>
+          </div>
+          <div class="show-collab-overview-box">
+            <div class="show-collab-overview">
+              <%= @collab.overview %>
+            </div>
+          </div>
+          <div class="company-word-box">
+            <div class="company-word">
+            </div>
+          </div>
+          <div class="show-collab-url-box">
+            <div class="show-collab-url">
+              <%= auto_link(@collab.url) %>
+            </div>
+          </div>
+          <div class="show-collab-time-box">
+            <div class="show-collab-time">
+              <%= @collab.created_at %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="post-box">
+        <a class="orange-more"<%= link_to 'コラボトップ', :controller => "collabs", :action => "index" %></a>
+      </div>
+    
+  </div>
+</div>
+
+
+<div class="orange">
+  <div class="all-orange">
+
+<%= form_for @collab do |t| %>
+
+  <div class="field">
+    
+    <%= t.label :event %>
+    <br>
+    <%= t.text_field :event, :size => 140 %>
+    <br>
+    <%= t.label :company %>
+    <br>
+    <%= t.text_field :company, :size => 140 %>
+    <br>
+    <%= t.label :image %>
+    <br>
+    <%= t.file_field :image %>
+    <br>
+    <%= t.label :overview %>
+    <br>
+    <%= t.text_field :overview, :size => 140 %>
+    <br>
+    <%= t.label :url %>
+    <br>
+    <%= t.text_field :url, :size => 140 %>
+    <br>
+    <%= t.label :images2 %>
+    <br>
+    <%= t.file_field :images2 %>
+    <br>
+    <%= t.label :images3 %>
+    <br>
+    <%= t.file_field :images3 %>
+    <br>
+    <%= t.label :images4 %>
+    <br>
+    <%= t.file_field :images4 %>
+    <br>
+    <%= t.label :images5 %>
+    <br>
+    <%= t.file_field :images5 %>
+
+    </div>
+
+    <div class="edit-submit-delete-box">
+  <div class="edit-submit-delete"><%= t.submit "編集する" %>
+<% end %></div>
+  <div class="edit-submit-delete"><%= button_to "削除する", collab_path, method: :delete %>
+  </div>
+</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+<div class="">
+
+</div>

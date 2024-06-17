@@ -1,0 +1,265 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%# <link rel="stylesheet" href="./stylesheets/index.css"> %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <%= stylesheet_link_tag "tops", :media => "all" %>
+  </head>
+
+
+  <body><!--ページの見た目を作る部分-->
+
+
+  
+  <%# <ul class="slider">
+<li class="slider-item slider-item01"></li>
+<li class="slider-item slider-item02"></li>
+<li class="slider-item slider-item03"></li>
+</ul> %>
+
+  <section id="area-2">
+  </section>
+
+    <div class="first-block">
+      <div class="title">
+        <div class="vision-block">
+          <div class="vision">
+            <h1>
+              きのうより、
+              <br>
+              おもしろい、
+              <br>
+              きょうを。
+            </h1>
+          </div>
+          <div class="sub">
+            <h4>
+              ローカルに知を探求し続け、
+              <br>
+              地域に寄り添う集合知となる
+            </h4>
+          </div>
+        </div>
+        <div class="logo-block">
+          <%= image_tag 'koken-logo.png', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto" %>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="second-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'gathering.png', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              団体概要
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              きのうより、
+              <br>
+              おもしろい、
+              <br>
+              きょうを。
+            </h4>
+          </div>
+          <div class="second-more">
+            <a class="red-more" <%= link_to 'View More', :controller => "frees", :action => "index"%></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="third-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'koukoku.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              コラボ
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              広研×あなた
+              <br>
+              化学反応を起こす。
+            </h4>
+          </div>
+          <div class="third-more">
+            <a class="orange-more" <%= link_to 'View More', :controller => "collabs", :action => "index" %></a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="fourth-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'imaichi.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              フリーペーパー
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              きのうより、
+              <br>
+              おもしろい、
+              <br>
+              きょうを。
+            </h4>
+          </div>
+          <div class="third-more">
+            <a class="yellow-more" <%= link_to 'View More', :controller => "frees", :action => "index"%></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="fifth-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'okinawa.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              オフ
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              遊びも全力
+              <br>
+              仲間と思い出を。
+            </h4>
+          </div>
+          <div class="third-more">
+            <a class="green-more" <%= link_to 'View More', :controller => "offs", :action => "index" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sixth-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'marketing.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              マーケティング
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              思考し続け
+              <br>
+              創り出そう。
+            </h4>
+          </div>
+          <div class="third-more">
+            <a class="blue-more" <%= link_to 'View More', :controller => "marketings", :action => "index" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="seventh-block">
+      <div class="white">
+        <div class="image-block">
+          <%= image_tag 'inside.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"all-image" %>
+        </div>
+        <div class="overview">
+          <div class="department">
+            <h1>
+              インサイド
+            </h1>
+          </div>
+          <div class="explanation">
+            <h4>
+              学び続ける
+              <br>
+              集合知。
+            </h4>
+          </div>
+          <div class="third-more">
+            <a class="seven-more" <%= link_to 'View More', :controller => "insides", :action => "index" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+        document.addEventListener("turbolinks:load", function() { 
+          	$('.slider').slick({
+		fade:true,//切り替えをフェードで行う。初期値はfalse。
+		autoplay: true,//自動的に動き出すか。初期値はfalse。
+		autoplaySpeed: 3000,//次のスライドに切り替わる待ち時間
+		speed:1000,//スライドの動きのスピード。初期値は300。
+		infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+		slidesToShow: 1,//スライドを画面に3枚見せる
+		slidesToScroll: 1,//1回のスクロールで3枚の写真を移動して見せる
+		arrows: true,//左右の矢印あり
+		prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
+		nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
+		dots: true,//下部ドットナビゲーションの表示
+    pauseOnFocus: false,//フォーカスで一時停止を無効
+    pauseOnHover: false,//マウスホバーで一時停止を無効
+    pauseOnDotsHover: false,//ドットナビゲーションをマウスホバーで一時停止を無効
+    
+});
+        });
+
+        window.onload = slick()
+        
+
+</script>
+
+<%# <script src="js/slide.js"></script> %>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

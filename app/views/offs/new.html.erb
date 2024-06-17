@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%= stylesheet_link_tag "offs", :media => "all" %>
+  </head>
+
+
+  <body><!--ページの見た目を作る部分-->
+    <section id="area-2">
+    </section>
+
+<div class="orange">
+  <div class="all-orange">
+      <div class="orange-edit">
+        <div class="new-title-box">
+            <h1>
+              オフ投稿ページ
+            </h1>
+        </div>
+      </div>
+
+<div class="">
+
+</div>
+
+
+  </div>
+</div>
+
+
+<div class="orange">
+  <div class="all-orange">
+
+<%= form_for @off do |t| %>
+
+  <div class="field">
+    
+    <%= t.label :event %>
+    <br>
+    <%= t.text_field :event, :size => 140 %>
+    <br>
+    <%= t.label :catch %>
+    <br>
+    <%= t.text_field :catch, :size => 140 %>
+    <br>
+    <%= t.label :image %>
+    <br>
+    <%= t.file_field :image %>
+    <br>
+    <%= t.label :overview %>
+    <br>
+    <%= t.text_field :overview, :size => 140 %>
+    <br>
+    <%= t.label :image2 %>
+    <br>
+    <%= t.file_field :image2 %>
+    <br>
+    <%= t.label :image3 %>
+    <br>
+    <%= t.file_field :image3 %>
+    <br>
+    <%= t.label :image4 %>
+    <br>
+    <%= t.file_field :image4 %>
+    <br>
+    <%= t.label :image5 %>
+    <br>
+    <%= t.file_field :image5 %>
+
+    </div>
+
+    <div class="edit-submit-delete-box">
+  <div class="edit-submit-delete"><%= t.submit "オフ投稿をする" %>
+<% end %></div>
+  
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+

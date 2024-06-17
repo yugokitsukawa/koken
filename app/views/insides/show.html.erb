@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%= stylesheet_link_tag "insides", :media => "all" %>
+  </head>
+
+
+  <body><!--ページの見た目を作る部分-->
+<section id="area-2">
+  </section>
+<div class="">
+</div>
+
+
+<div class="orange">
+    <div class="all-white">
+
+<div class="name-collab-box">
+    <div class="name-collab">
+            <h1>
+              マーケティング
+            </h1>
+    </div>
+</div>
+
+    <div class="first-block-collab">
+      
+        <div class="vision-block-collab">
+          <div class="vision-collab">
+            <h1>
+              思考し続け、
+              <br>
+              創り出そう
+            </h1>
+          </div>
+          <div class="sub-collab">
+            <h4>
+              広研では、仲間とともにコンペに出場するなど
+              <br>
+              日々、マーケティングに触れ続けます。
+            </h4>
+          </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="show-margin">
+    </div>
+
+        <div class="all-orange">
+
+
+      <div class="show-collab-box-box">
+        <div class="show-collab-box">
+          <div class="show-collab-image-box">
+            <div class="show-collab-image">
+              <%= cl_image_tag(@inside.image.filename, width: 800, height: 600, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %>
+            </div>
+          </div>
+          <div class="show-collab-company-box">
+            <div class="show-collab-company">
+              <%= @inside.catch %>
+            </div>
+          </div>
+          <div class="show-collab-event-box">
+            <div class="show-collab-event">
+              <%= @inside.event %>
+            </div>
+          </div>
+          <div class="show-collab-overview-box">
+            <div class="show-collab-overview">
+              <%= @inside.overview %>
+            </div>
+          </div>
+          <div class="show-collab-url-box">
+            <div class="show-collab-url">
+              <%= auto_link(@inside.url) %>
+            </div>
+          </div>
+          <div class="show-collab-time-box">
+            <div class="show-collab-time">
+              <%= @inside.created_at %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collabs-container">
+        <div class="collab">
+          <div class="collab-show-image">
+          <div class="show-image-add">
+      <%= cl_image_tag(@inside.images2.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <div class="show-image-add"><%= cl_image_tag(@inside.images3.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <div class="show-image-add"><%= cl_image_tag(@inside.images4.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      <div class="show-image-add"><%= cl_image_tag(@inside.images5.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"image") %></div>
+      </div>
+      </div>
+</div>
+
+<div class="">
+
+</div>
+      <div class="post-box">
+        <a class="orange-more"<%= link_to 'トップ', :controller => "insides", :action => "index" %></a>
+        <a class="orange-more"<%= link_to "編集", edit_inside_path(@inside.id) %></a>
+      </div>
+    
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </body>
+</html>

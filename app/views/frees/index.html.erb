@@ -1,0 +1,183 @@
+<!DOCTYPE html> <!--　この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+  <head><!--ページに表示されない情報(サイトの裏側の設定)-->
+    <meta charset="utf-8">
+    <title>広告研究会</title><!--ブラウザのタブのタイトルを指定-->
+    <%# <link rel="stylesheet" href="./stylesheets/index.css"> %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <%= stylesheet_link_tag "frees", :media => "all" %>
+  </head>
+
+    <body><!--ページの見た目を作る部分-->
+
+<section id="area-2">
+  </section>
+    
+<ul class="slider">
+<li class="slider-item slider-item01"></li>
+<li class="slider-item slider-item02"></li>
+<li class="slider-item slider-item03"></li>
+</ul>
+
+<div class="orange">
+  <div class="white-back">
+  </div>
+  <div class="all-white">
+    <div class="white-back">
+      </div>
+    <div class="explanation-box">
+
+
+
+    
+<div class="name-collab-box">
+    <div class="name-collab">
+            <h1>
+              フリーペーパー
+            </h1>
+    </div>
+</div>
+
+    <div class="first-block-collab">
+      
+        <div class="vision-block-collab">
+          <div class="vision-collab">
+            <h1>
+              地域に寄り添う
+              <br>
+              ライター、デザイナー
+            </h1>
+          </div>
+          <div class="sub-collab">
+            <h4>
+              企画、取材、出版まで
+              <br>
+              媒体はyammy!  イマ＊イチ
+            </h4>
+          </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+<div class="">
+
+</div>
+  <div class="all-orange">
+    <div class="topic-box">
+      <div class="topic">
+        <h1>
+        topics
+        </h1>
+      </div>
+    </div>
+
+
+<div class="topics-container">
+        <div class="collabs-container">
+          <% @frees.each do |t| %>
+            <div class="collab">
+            
+            <div class="collab-content">
+              <p class="company"><%= t.catch %></p>
+            </div>
+          
+            <div class="show-collab-image">
+              <p class="event"><%= t.number %></p>
+            </div>
+            <div class="show-collab-image">
+              <%= cl_image_tag(t.image.filename, width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto") %>
+            </div>
+            <div class="show-collab-image">
+              <%= t.created_at %><br>
+            </div>
+      <br>
+
+      <div class="gnavi">
+        <a class="show-more"<%= link_to "詳細へ", free_path(t.id) %></a>
+      </div>
+
+
+            </div>
+  <% end %>
+  
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+  <div class="pagination-box">
+    <div class="pagination">
+      <%= paginate @frees %>
+    </div>
+  </div>
+
+  <div class="post-box">
+    
+      <a class="orange-more"<%= link_to 'コラボ投稿', :controller => "frees", :action => "new" %></a>
+    
+  </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+        document.addEventListener("turbolinks:load", function() { 
+          	$('.slider').slick({
+		fade:true,
+    //切り替えをフェードで行う。初期値はfalse。
+		autoplay: true,
+    //自動的に動き出すか。初期値はfalse。
+		autoplaySpeed: 3000,
+    //次のスライドに切り替わる待ち時間
+		speed:1000,
+    //スライドの動きのスピード。初期値は300。
+		infinite: true,
+    //スライドをループさせるかどうか。初期値はtrue。
+		slidesToShow: 1,
+    //スライドを画面に3枚見せる/
+		slidesToScroll: 1,
+    //1回のスクロールで3枚の写真を移動して見せる
+		arrows: true,
+    //左右の矢印あり
+		prevArrow: '<div class="slick-prev"></div>',
+    //矢印部分PreviewのHTMLを変更
+		nextArrow: '<div class="slick-next"></div>',
+    //矢印部分NextのHTMLを変更
+		dots: true,
+    //下部ドットナビゲーションの表示
+        pauseOnFocus: false,
+        //フォーカスで一時停止を無効
+        pauseOnHover: false,
+        //マウスホバーで一時停止を無効
+        pauseOnDotsHover: false,
+        //ドットナビゲーションをマウスホバーで一時停止を無効
+});
+        });
+        
+
+</script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,408 @@
+.first-block {
+    height: 700px;
+    background-color: #ffffff;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+  }
+
+  .vision {
+    font-size: 40px;
+  }
+
+  .sub {
+    font-size: 20px;
+  }
+  .logo-block{
+    background-image: url("logo.jpg");
+    background-size: cover;
+  }
+  
+
+
+
+  .second-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    /* height: auto; */
+    background-color: #e40b0b;
+  }
+  .white {
+    border-radius: 20px;
+    /* height: 665px;
+    width: 1485px; */
+    height: 90%;
+    width: 95%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .image-block {
+    /* height: 95%; */
+    /* width: 980px; */
+    width: 95%;
+    height: auto;
+    margin-left: 25px;
+    border-radius: 20px;
+  }
+  .all-image{
+    border-radius: 20px;
+    /* height: 100%;
+    width: 980px; */
+    width: 100%;
+    height: auto;
+   }
+
+  .overview {
+    /* height: 100%; */
+    width: 95%;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-left: 300px;  */
+  }
+  .overview-box {
+    /* height: 100%; */
+    width: 95%;
+    /* height: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin-left: 300px; 
+    /* margin-right: 150px; */
+  }
+  .department {
+    font-size: 40px;
+    margin-bottom: 50px; 
+  }
+  .explanation {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+   /* .second-more {
+  
+} */
+
+.red-more {
+  /*ボタンの形状*/
+  display: inline-block;
+  color: #fff;
+  padding: 18px 60px;
+  border-radius:30px;
+  text-decoration: none;
+  outline: none;
+  /*背景色*/
+  background: linear-gradient(to right, #ef4646 0%, #fa3939 80%, #fa3939 100%);
+  /*アニメーションの指定*/ 
+  transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  font-size: 30px;
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.red-more:hover {
+  transform: scale(1.05);
+  /*ボックスの影*/  
+  box-shadow: 0 15px 15px rgba(239, 77, 117, 0.4);
+}
+
+  
+  .third-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background-color: #eb8116;
+  }
+  .third-more {
+    font-size: 30px;
+  }
+  .orange-more {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #eaad44 0%, #fac639 80%, #fac639 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+	  align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+
+    margin-left: 40px;
+    /* 応急処置 */
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.orange-more:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(247, 210, 78, 0.4);
+}
+
+
+
+
+  .fourth-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background-color: #e0eb16;
+  }
+  .fourth-more {
+    font-size: 30px;
+  }
+  .yellow-more {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #eae744 0%, #faf039 80%, #faf739 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+	  align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.yellow-more:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(221, 250, 57, 0.4);
+}
+
+
+  .fifth-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background-color: #61eb16;
+  }
+  .fifth-more {
+    font-size: 30px;
+  }
+  .green-more {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #7bea44 0%, #93fa39 80%, #79fa39 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+	  align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.green-more:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(108, 250, 57, 0.4);
+}
+
+
+  .sixth-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background-color: #16bdeb;
+  }
+  .sixth-more {
+    font-size: 30px;
+  }
+  .blue-more {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #44d9ea 0%, #39faf7 80%, #39fafa 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+	  align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.blue-more:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(57, 224, 250, 0.4);
+}
+
+
+  .seventh-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 700px;
+    background-color: #a816eb;
+  }
+  .seventh-more {
+    font-size: 30px;
+  }
+  .seven-more {
+    /*ボタンの形状*/
+    display: inline-block;
+    color: #fff;
+    padding: 18px 60px;
+    border-radius:30px;
+    text-decoration: none;
+    outline: none;
+    /*背景色*/
+    background: linear-gradient(to right, #be44ea 0%, #9939fa 80%, #cd39fa 100%);
+    /*アニメーションの指定*/ 
+    transition: all 0.3s ease-out;
+    display: flex;
+    justify-content: center;
+	  align-items: center;
+    height: 50px;
+    width: 200px;
+    font-size: 30px;
+}
+/*hoverした際のスケールで全体を拡大し影を付ける*/
+.seven-more:hover {
+    transform: scale(1.05);
+    /*ボックスの影*/  
+    box-shadow: 0 15px 15px rgba(176, 57, 250, 0.4);
+}
+
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background:url(free1.png);
+}
+
+.slider-item02 {
+    background:url(logo.jpg);
+}
+
+.slider-item03 {
+    background:url(gathering.png);
+}
+
+.slider-item {
+    width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height:100vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat;/*背景画像をリピートしない*/
+    background-position: center;/*背景画像の位置を中央に*/
+    background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+.slick-prev, 
+.slick-next {
+    position: absolute;
+	z-index: 3;
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #fff;/*矢印の色*/
+    border-right: 2px solid #fff;/*矢印の色*/
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left:2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right:2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+	position: relative;
+	z-index: 3;
+    text-align:center;
+	margin:-50px 0 0 0;/*ドットの位置*/
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#fff;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+
+
+
+
+
+  @media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+  }
+  @media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+  }

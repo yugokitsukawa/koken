@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Koken</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+<script src="https://kit.fontawesome.com/79aa5fdd92.js" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+
+
+  <body>
+    
+    <header id="header" class="DownMove">
+    <a href="http://localhost:3000/tops"><%= image_tag 'logo.jpg', width: 80, height: 60, crop: "fill", quality: "auto", fetch_format: "auto", class:"menu-tag" %></a>
+    <nav>
+    <ul id="g-navi">
+      <li><a href="#area-1", class="menu-red" >団体概要</a></li>
+      <li><a href="http://localhost:3000/collabs", class="menu-orange">コラボ</a></li>
+      <li><a href="http://localhost:3000/frees", class="menu-yellow">フリーペーパー</a></li>
+      <li><a href="http://localhost:3000/offs", class="menu-green">オフ</a></li>
+      <li><a href="http://localhost:3000/marketings", class="menu-blue">マーケティング</a></li>
+      <li><a href="http://localhost:3000/insides", class="menu-purple">インサイド</a></li>
+    </ul>
+  </nav>
+  </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+
+
+      
+      <div class="footer-logo-box">
+      <a href="http://localhost:3000/tops"><%= image_tag 'logo.jpg', width: 400, height: 300, crop: "fill", quality: "auto", fetch_format: "auto", class:"footer-logo" %></a>
+      </div>
+
+      <div class="snsbtniti-box">
+  <ul class="snsbtniti">
+<a href="https://twitter.com/doshisha_adds" class="flowbtn17 fl_tw2"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/doshisha_koken_adds?igsh=dm9yYWVoamVtN2x5&utm_source=qr" class="flowbtn17 insta_btn2"><i class="fab fa-instagram"></i></a>
+<a href="youtubeのプロフィールURL" class="flowbtn17 fl_yu2"><i class="fab fa-youtube"></i></a>
+<a href="https://line.me/ti/p/%ライン＠のアカウント" class="flowbtn17 fl_li2"><i class="fab fa-line"></i></a>
+<a href="お問い合わせ先のURL" class="flowbtn17 fl_ma2"><i class="far fa-envelope"></i></a>
+</ul>
+</div>
+
+
+<nav>
+    <ul id="g-navi">
+      <li><a href="#area-1", class="menu-red" >団体概要</a></li>
+      <li><a href="http://localhost:3000/collabs", class="menu-orange">コラボ</a></li>
+      <li><a href="http://localhost:3000/frees", class="menu-yellow">フリーペーパー</a></li>
+      <li><a href="http://localhost:3000/offs", class="menu-green">オフ</a></li>
+      <li><a href="http://localhost:3000/marketings", class="menu-blue">マーケティング</a></li>
+      <li><a href="http://localhost:3000/insides", class="menu-purple">インサイド</a></li>
+    </ul>
+  </nav>
+
+<div class="footer-bottom">
+
+</div>
+
+
+
+<img src=”../../assets/images/logo-white.png”>
+
+
+  
+    </footer>
+
+    <script>
+    var beforePos = 0;//スクロールの値の比較用の設定
+
+//スクロール途中でヘッダーが消え、上にスクロールすると復活する設定を関数にまとめる
+function ScrollAnime() {
+    var elemTop = $('#area-2').offset().top;//#area-2の位置まできたら
+	var scroll = $(window).scrollTop();
+    //ヘッダーの出し入れをする
+    if(scroll == beforePos) {
+		//IE11対策で処理を入れない
+    }else if(elemTop > scroll || 0 > scroll - beforePos){
+		//ヘッダーが上から出現する
+		$('#header').removeClass('UpMove');	//#headerにUpMoveというクラス名を除き
+		$('#header').addClass('DownMove');//#headerにDownMoveのクラス名を追加
+    }else {
+		//ヘッダーが上に消える
+        $('#header').removeClass('DownMove');//#headerにDownMoveというクラス名を除き
+		$('#header').addClass('UpMove');//#headerにUpMoveのクラス名を追加
+    }
+    
+    beforePos = scroll;//現在のスクロール値を比較用のbeforePosに格納
+}
+
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	ScrollAnime();//スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
+});
+
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+	ScrollAnime();//スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
+});
+
+//リンク先のidまでスムーススクロール
+//※ページ内リンクを行わない場合は不必要なので削除してください
+    var headerH = $("#header").outerHeight(true);//headerの高さを取得    
+    $('#g-navi li a').click(function () {
+	var elmHash = $(this).attr('href'); 
+	var pos = $(elmHash).offset().top-headerH;//header分の高さを引いた高さまでスクロール
+	$('body,html').animate({scrollTop: pos}, 1000);
+	return false;
+});
+</script>
+   
+  </body>
+</html>
+
+
+<div class="">
+
+</div>
